@@ -171,6 +171,12 @@ body {
     display: flex;
     gap: 32px;
 }
+.card:not(:last-child) {
+    margin-bottom: 95px;
+}
+.card_r {
+    flex-direction: row-reverse;
+}
 .card__img {
     border-radius: 16px;
     overflow: hidden;
@@ -181,13 +187,14 @@ body {
 }
 .card__info {
     flex: 1 1 auto;
+    align-self: flex-end;
 }
 .card__tag {
     font-weight: 600;
-    line-height: 150%;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: #E3E4E6;
+    margin-bottom: 16px;
 
 }
 .card__text {
@@ -195,26 +202,79 @@ body {
     font-size: 32px;
     line-height: 150%;
     color: rgba(227, 228, 230, 0.55);
+    margin-bottom: 24px;
 }
 .card__text span {
     color: #E3E4E6;
     font-weight: 600;
 }
 .card__category {
-    font-weight: 300;
     font-size: 18px;
-    color: #E3E4E6;
-    margin-top: 20px;
+    font-weight: 600;
 }
 .card__button {
+    display: inline-block;
     margin-top: 32px;
-    cursor: pointer;
-    padding:  10px 10px 10px 10px ;
-    border: 1px solid blueviolet;
-    border-radius: 100px 100px 100px;
-    width: 200px;
+    padding: 8px 48px 8px 16px;
+    border-radius: 100px;
+    border: 1px solid rgba(227, 228, 230, 0.55);
+    color: #fff;
+    text-decoration: none;
+    position: relative;
 }
-.card__button {
+.card__button::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: transparent url("../img/arrow-small.svg") center center no-repeat;
+}
+.card__button:hover {
+    background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
+    border: 1px solid #E3E4E6;    
+}
+.card__button:hover::before {
+    background: transparent url("../img/arrow-hover.svg") center center no-repeat;
+
+}
+/*__________________________________ABOUT________________________________________________*/
+
+.about {
+    padding: 75px 0;
+}
+.about__container {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
 }
+.about__text {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 150%;
+    color: #E3E4E6;
+}
+.about__text span {
+    color: rgba(227, 228, 230, 0.55);
+    font-weight: 300;
+}
+.about__title {
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #E3E4E6;
+
+}
+.about__gallery {
+    flex: 0 0 50%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+.about__img {
+}
+
