@@ -328,10 +328,15 @@ body {
 
 .footer__social svg {
     fill: #E3E4E6;
+    transition: all 0.5s;
 }
 .footer__social:hover svg {
     fill: fuchsia;
+    transform: scale(1.3);
 }
 .footer__social:not(:last-child) {
     margin-right: 55px;
+}
+.footer_programmer svg {
+    display: flex;
 }
