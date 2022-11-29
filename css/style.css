@@ -69,7 +69,31 @@ body {
     transform: translateX(-50%);
     opacity: 0;
     visibility: hidden;
-}  
+} 
+.menu__icon {
+    display: block;
+    width: 30px;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+} 
+.menu__icon span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    top: calc(50% - 1px);
+    background-color: #E3E4E6;
+}
+.menu__icon span:first-child {
+    top: 0;
+
+}
+.menu__icon span:last-child {
+    top: auto;
+    bottom: 0;
+}
 
 /*_____________________________________________HERO________________________________________________*/
 .hero {
@@ -337,6 +361,24 @@ body {
 .footer__social:not(:last-child) {
     margin-right: 55px;
 }
+.footer_copyright {
+    font-weight: 600;
+    color: rgba(227, 228, 230, 0.55);  
+}
+.footer_copyright span {
+    font-weight: 800;
+	color: #e3e4e6;
+}
+.footer_location {
+    position: relative;
+    top: 40px;
+    font-weight: 600;
+    color: rgba(227, 228, 230, 0.55);
+}
 .footer_programmer svg {
     display: flex;
+}
+
+@media (max-width: 576px) {
+    
 }
