@@ -43,6 +43,16 @@ body {
 .menu__list.active {
     transform: translateX(0);
 }
+.menu__link.active {
+    background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;   
+}
+.menu__link.active::before {
+    opacity: 1;
+    visibility: visible;
+}
 .menu__link:hover{
     background: linear-gradient(99.05deg, #BC3CD8 0.07%, #C54B8C 106.32%);
     -webkit-background-clip: text;
